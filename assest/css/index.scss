@@ -1,0 +1,106 @@
+body {
+    padding: 0;
+    margin: 0;
+    direction: rtl;
+}
+
+.slider__container {
+
+    //     height: 650px;
+    //     padding: 0;
+    //     margin: 0;
+    //     // li {
+    //     //     display: inline-block;
+    //     //     height: 650px;
+    //     //     img {
+    //     //         position: absolute;
+    //     //     }
+    //     // }
+    //     .slider-active-slide {
+    //         border-right: 1px solid #979797;
+    //         border-left: 1px solid #979797;
+    //         width: 838px;
+    //         position: relative;
+    //         img {
+    //             position: absolute;
+    //         }
+    //     }
+    //     .slider-right-slides,
+    //     .slider-left-slide {
+    //         width: 250px;
+    //         position: relative;
+    //         img {
+    //             position: absolute;
+    //             width: 250px;
+    //             height: 350px;
+    //             top: 50%;
+    //             left: 0;
+    //             transform: translate(0, -50%);
+    //         }
+    //     }
+    // }
+    ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        li {
+            position: relative;
+            height: 650px;
+            list-style: none;
+
+            img {
+                position: absolute;
+                transition: 0.3s;
+            }
+        }
+
+        .slider-right-slides,
+        .slider-left-slide {
+            width: 250px;
+            position: relative;
+
+            img {
+                width: 250px;
+                top: 50%;
+                left: 0;
+                transform: translate(0, -50%);
+                height: 0;
+            }
+        }
+
+        .slider-right-slides {
+            img {
+                top: 20%;
+                transform: translate(0, -20%);
+            }
+        }
+
+        .slider-active-slide {
+            border-right: 1px solid #979797;
+            border-left: 1px solid #979797;
+            width: 838px;
+            position: relative;
+
+            img {
+                width: 515px;
+                height: 640px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 0;
+            }
+        }
+    }
+
+    .next-slide,
+    .prev-slide {
+        height: 350px !important;
+    }
+
+    .active-slide {
+        height: 640px !important;
+    }
+}
